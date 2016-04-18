@@ -21,7 +21,7 @@ import org.junit.Test;
 
 public class part3test {
 
-	@Test
+	//@Test    //room_order_id":"O1604181741107132634S
 	public void create_order() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -29,13 +29,15 @@ public class part3test {
 		formparams.add(new BasicNameValuePair("sob.password", "111111"));
 		formparams.add(new BasicNameValuePair("sob.hotelgroup_id", "159"));
 		formparams.add(new BasicNameValuePair("order.hotel_id", "cnbjbjcgmz"));
-		formparams.add(new BasicNameValuePair("order.room_type_id", "1323"));
+		formparams.add(new BasicNameValuePair("order.room_type_id", "1837"));
 		formparams.add(new BasicNameValuePair("order.room_quantity", "1"));
 		formparams.add(new BasicNameValuePair("order.check_in_date", "2016-04-28"));
 		formparams.add(new BasicNameValuePair("order.check_out_date", "2016-05-01"));
 		formparams.add(new BasicNameValuePair("order.rate_code", "WEB"));
 		formparams.add(new BasicNameValuePair("order.contacter", "Johnny"));
 		formparams.add(new BasicNameValuePair("order.name", "Johnny"));	
+		formparams.add(new BasicNameValuePair("order.total_order_money", "900"));
+		formparams.add(new BasicNameValuePair("order.mobile","13310453245"));
 		
 		UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams, Consts.UTF_8);
 		HttpPost httppost = new HttpPost("http://test.chinapms.com:9001/gateway/create_order");
@@ -57,17 +59,13 @@ public class part3test {
 		formparams.add(new BasicNameValuePair("sob.sob_code", "www.test.com"));
 		formparams.add(new BasicNameValuePair("sob.password", "111111"));
 		formparams.add(new BasicNameValuePair("sob.hotelgroup_id", "159"));
-		formparams.add(new BasicNameValuePair("order.hotel_id", "cnbjbjcgmz"));
-		formparams.add(new BasicNameValuePair("order.room_type_id", "1323"));
-		formparams.add(new BasicNameValuePair("order.room_quantity", "1"));
-		formparams.add(new BasicNameValuePair("order.check_in_date", "2016-04-28"));
-		formparams.add(new BasicNameValuePair("order.check_out_date", "2016-05-01"));
-		formparams.add(new BasicNameValuePair("order.rate_code", "WEB"));
-		formparams.add(new BasicNameValuePair("order.contacter", "Johnny"));
-		formparams.add(new BasicNameValuePair("order.name", "Johnny"));	
+		//formparams.add(new BasicNameValuePair("hotel_id", "cnbjbjcgmz"));
+		formparams.add(new BasicNameValuePair("room_order_id", "O1604181741107132634S"));
+		formparams.add(new BasicNameValuePair("mobile_or_email", "13310453245"));
+		//formparams.add(new BasicNameValuePair("room_type_id", "1837"));
 		
 		UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams, Consts.UTF_8);
-		HttpPost httppost = new HttpPost("http://test.chinapms.com:9001/gateway/create_order");
+		HttpPost httppost = new HttpPost("http://test.chinapms.com:9001/gateway/cancel_order");
 		httppost.setEntity(entity);
 		CloseableHttpClient client = HttpClients.createDefault();
 		HttpResponse httpResponse = client.execute(httppost); 
