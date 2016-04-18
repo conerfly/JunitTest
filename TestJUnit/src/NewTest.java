@@ -28,7 +28,7 @@ import org.apache.http.util.EntityUtils;
 
 public class NewTest {
 	
-	//@Test 								//it is a little bit complicated, so explain this later
+	@Test 								//it is a little bit complicated, so explain this later
 	public void search_hotel_rates() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -52,7 +52,7 @@ public class NewTest {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_hotel_detail() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -74,7 +74,7 @@ public class NewTest {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_room_type_list() throws UnsupportedEncodingException, IOException, JSONException{
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
 		formparams.add(new BasicNameValuePair("sob.sob_code", "www.test.com"));
@@ -95,7 +95,7 @@ public class NewTest {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_sub_hotel_list() throws UnsupportedEncodingException, IOException, JSONException{
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
 		formparams.add(new BasicNameValuePair("sob.sob_code", "www.test.com"));
@@ -115,7 +115,7 @@ public class NewTest {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_rate_type_list() throws UnsupportedEncodingException, IOException, JSONException{
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
 		formparams.add(new BasicNameValuePair("sob.sob_code", "www.test.com"));
