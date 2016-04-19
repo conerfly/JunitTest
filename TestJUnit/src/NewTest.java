@@ -227,6 +227,7 @@ public class NewTest {
 		formparams.add(new BasicNameValuePair("sob.sob_code", "www.test.com"));
 		formparams.add(new BasicNameValuePair("sob.password", "111111"));
 		formparams.add(new BasicNameValuePair("sob.hotelgroup_id", "159"));
+		formparams.add(new BasicNameValuePair("hotel_id", "cnbjbjcgmz"));
 		formparams.add(new BasicNameValuePair("rate_code", "WEB"));
 		UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams, Consts.UTF_8);
 		HttpPost httppost = new HttpPost("http://test.chinapms.com:9001/gateway/get_clock_room_rates");
