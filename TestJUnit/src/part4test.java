@@ -261,7 +261,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void modify_card_score() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -270,7 +270,7 @@ public class part4test {
 		formparams.add(new BasicNameValuePair("sob.hotelgroup_id", "159"));
 		formparams.add(new BasicNameValuePair("card_type_id", "100847"));
 		formparams.add(new BasicNameValuePair("card_no", "1459"));
-		formparams.add(new BasicNameValuePair("score", "10"));
+		formparams.add(new BasicNameValuePair("score", "10000"));
 		
 		UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams, Consts.UTF_8);
 		HttpPost httppost = new HttpPost("http://test.chinapms.com:9001/gateway/modify_card_score");
@@ -423,7 +423,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	@Test
+	//@Test
 	public void deposit_card() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -432,7 +432,7 @@ public class part4test {
 		formparams.add(new BasicNameValuePair("sob.hotelgroup_id", "159"));
 		formparams.add(new BasicNameValuePair("card_type_id", "100847"));
 		formparams.add(new BasicNameValuePair("card_no", "1459"));
-		formparams.add(new BasicNameValuePair("payment.money", "100"));
+		formparams.add(new BasicNameValuePair("payment.money", "10000"));
 
 		UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams, Consts.UTF_8);
 		HttpPost httppost = new HttpPost("http://test.chinapms.com:9001/gateway/deposit_card");
