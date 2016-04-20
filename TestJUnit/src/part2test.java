@@ -26,7 +26,7 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
 
-public class NewTest {
+public class part2test {
 	
 	@Test 								//it is a little bit complicated, so explain this later
 	public void search_hotel_rates() throws UnsupportedEncodingException, IOException, JSONException{
