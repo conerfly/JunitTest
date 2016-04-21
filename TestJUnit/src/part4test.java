@@ -143,7 +143,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void list_card_check_records() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
