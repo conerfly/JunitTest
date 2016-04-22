@@ -44,7 +44,7 @@ public class part9test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test     // ** did not enter values      
+	@Test        
 	public void deposit_register() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();

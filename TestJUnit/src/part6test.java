@@ -21,7 +21,7 @@ import org.junit.Test;
 
 public class part6test {
 
-	//@Test
+	@Test
 	public void get_hotel_review_stats() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -43,7 +43,7 @@ public class part6test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_review_detail() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -90,7 +90,7 @@ public class part6test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_card_reviews() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -115,7 +115,7 @@ public class part6test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_hotel_reviews() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -139,7 +139,7 @@ public class part6test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_multi_hotel_review_stats() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();

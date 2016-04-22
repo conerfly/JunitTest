@@ -17,10 +17,11 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.junit.Test;
 
 public class part8test {
 
-	//@Test
+	@Test
 	public void get_voucher_type_list() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -41,7 +42,7 @@ public class part8test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test     //voucher.card_type_id, voucher.card_no is required
+	@Test     
 	public void sell_voucher() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -66,7 +67,7 @@ public class part8test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void sell_wechat_voucher() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -90,7 +91,7 @@ public class part8test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test        
+	@Test        
 	public void get_wechat_voucher() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -113,7 +114,7 @@ public class part8test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test        
+	@Test        
 	public void delete_wechat_voucher() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -136,7 +137,7 @@ public class part8test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test        
+	@Test        
 	public void bind_wechat_voucher() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();

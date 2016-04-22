@@ -28,16 +28,13 @@ import org.apache.http.util.EntityUtils;
 
 public class part2test {
 	
-	@Test 								//it is a little bit complicated, so explain this later
+	@Test 							
 	public void search_hotel_rates() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
 		formparams.add(new BasicNameValuePair("sob.sob_code", "www.test.com"));
 		formparams.add(new BasicNameValuePair("sob.password", "111111"));
 		formparams.add(new BasicNameValuePair("sob.hotelgroup_id", "159"));
-//		formparams.add(new BasicNameValuePair("condition.check_in_date", "2012-01-28"));
-//		formparams.add(new BasicNameValuePair("condition.check_out_date", "2012-02-01"));
-//		formparams.add(new BasicNameValuePair("condition.rate_codes", "WEB,TEAM"));
 		formparams.add(new BasicNameValuePair("condition.hotel_id", "cnbjbjcgmz"));
 		formparams.add(new BasicNameValuePair("condition.check_in_date", "2016-04-28"));
 		formparams.add(new BasicNameValuePair("condition.check_out_date", "2016-05-01"));

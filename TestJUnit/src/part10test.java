@@ -42,7 +42,7 @@ public class part10test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test        //did not enter values
+	@Test        //did not enter values
 	public void create_hk_job() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -66,7 +66,7 @@ public class part10test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test        
+	@Test        
 	public void get_custom_hk_job_types() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -83,8 +83,6 @@ public class part10test {
 		HttpEntity result = httpResponse.getEntity(); 
 		String strResult = EntityUtils.toString(result); 
 		System.out.println(strResult);
-		//JSONObject json = new JSONObject(strResult);
-		//assertFalse(json.has("exception_code"));
 		assertFalse(strResult.contains("exception_code"));
 	}
 }

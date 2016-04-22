@@ -21,7 +21,7 @@ import org.junit.Test;
 
 public class part4test {
 	
-	//@Test
+	@Test
 	public void register_card() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -51,7 +51,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 
-	//@Test
+	@Test
 	public void active_card() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -74,7 +74,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void card_login() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -97,7 +97,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void modify_card_profile() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -120,7 +120,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_card_detail() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -166,7 +166,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void modify_card_password() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -190,7 +190,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void modify_card_consume_password() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -215,7 +215,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void list_card_score_logs() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -238,7 +238,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void list_card_deposit_logs() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -285,7 +285,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void query_cards() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -307,7 +307,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test     //did not set the mobile number at the first method
+	@Test     
 	public void reset_card_password() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -330,7 +330,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test  //third party binding, not available for testing
+	@Test  //third party binding, not available for testing
 	public void get_binding_card() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -352,7 +352,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_card_vouchers() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -375,7 +375,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test     //third party test, currently not available
+	@Test     //third party test, currently not available
 	public void binding_exist_card() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -399,7 +399,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test     //third party test currently not available
+	@Test     //third party test currently not available
 	public void delete_card_binding() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -423,7 +423,7 @@ public class part4test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void deposit_card() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();

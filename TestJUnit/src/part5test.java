@@ -67,7 +67,7 @@ public class part5test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	@Test     //"exception_description":"奖品申请ID不正确"
+	@Test     
 	public void cancel_gift_application() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();

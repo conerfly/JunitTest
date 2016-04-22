@@ -21,7 +21,7 @@ import org.junit.Test;
 
 public class part3test {
 
-	//@Test    //room_order_id":"O1604181741107132634S
+	@Test    
 	public void create_order() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -52,17 +52,15 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void cancel_order() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
 		formparams.add(new BasicNameValuePair("sob.sob_code", "www.test.com"));
 		formparams.add(new BasicNameValuePair("sob.password", "111111"));
 		formparams.add(new BasicNameValuePair("sob.hotelgroup_id", "159"));
-		//formparams.add(new BasicNameValuePair("hotel_id", "cnbjbjcgmz"));
 		formparams.add(new BasicNameValuePair("room_order_id", "O1604181741107132634S"));
 		formparams.add(new BasicNameValuePair("mobile_or_email", "13310453245"));
-		//formparams.add(new BasicNameValuePair("room_type_id", "1837"));
 		
 		UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams, Consts.UTF_8);
 		HttpPost httppost = new HttpPost("http://test.chinapms.com:9001/gateway/cancel_order");
@@ -77,7 +75,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 
-	//@Test
+	@Test
 	public void get_order_detail() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -100,7 +98,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test					//"exception_description":"订单已经入住完成，被取消或者NoShow，不能付款"
+	@Test					
 	public void deposit_order() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -123,7 +121,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_card_orders() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -146,7 +144,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test                          //"exception_description":"订单已经入住完成，被取消或者NoShow，不能付款"
+	@Test                          
 	public void card_deposit_pay_order() throws UnsupportedEncodingException, IOException, JSONException{
 
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -169,7 +167,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test                //"exception_description":"预付款金额错误"
+	@Test                
 	public void card_score_pay_order() throws UnsupportedEncodingException, IOException, JSONException{
 		
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -195,7 +193,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_avail_rooms() throws UnsupportedEncodingException, IOException, JSONException{
 		
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -219,7 +217,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void assign_order_rooms() throws UnsupportedEncodingException, IOException, JSONException{
 		
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -242,7 +240,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void reassign_order_rooms() throws UnsupportedEncodingException, IOException, JSONException{
 		
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -265,7 +263,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void search_orders() throws UnsupportedEncodingException, IOException, JSONException{
 		
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -289,7 +287,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_order_by_ids() throws UnsupportedEncodingException, IOException, JSONException{
 		
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -311,7 +309,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test 							//need to fill out the voucher_no, and voucher_type_id
+	@Test 							
 	public void voucher_pay_order() throws UnsupportedEncodingException, IOException, JSONException{
 		
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -335,7 +333,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test
+	@Test
 	public void get_order_by_date() throws UnsupportedEncodingException, IOException, JSONException{
 		
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
@@ -358,7 +356,7 @@ public class part3test {
 		assertFalse(json.has("exception_code"));
 	}
 	
-	//@Test				//enter the correct room rate before testing
+	@Test				
 	public void create_clock_order() throws UnsupportedEncodingException, IOException, JSONException{
 		
 		List<NameValuePair> formparams = new ArrayList<NameValuePair>();
