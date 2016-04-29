@@ -41,20 +41,19 @@
 						query = "SELECT * FROM username";
 						resultSet = statement.executeQuery(query);
 			%>
-			<table cellspacing=5 cellpadding=5 bgcolor=#959999 colspan=2 rowspan=2 align='center'>
 			<% 
 						// why cannot write table outside java section?
-						//output.println("<table cellspacing=5 cellpadding=5 bgcolor=#959999 colspan=2 rowspan=2 align='center'>");
+						output.println("<table cellspacing=5 cellpadding=5 bgcolor=#959999 colspan=2 rowspan=2 align='center'>");
 						while (resultSet.next()) {
 			                String username = resultSet.getString("username");
 			                output.println("<tr><td> User: " + username + "</td></tr>");
 			            }
-						//output.println("</table>");
-						output.println("<form action='Add.jsp'>");
-						output.println("<br><input type='submit' value='Add' align='center'>");
-						output.println("</form>");
-			%>    
-			</table>        
+						output.println("</table>");
+						/* output.println("<form action='Add.jsp'>");
+						output.println("<br><input type='' value='Add' align='center'>");
+						output.println("</form>"); */
+						output.println("<br><input type='button' value='Add'><a href='Add.jsp'></a>");
+			%>        
 			<%
 					}else{
 						output.println("Incorrect password");
