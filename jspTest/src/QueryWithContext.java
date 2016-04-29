@@ -4,36 +4,39 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
 import javax.naming.NamingException;
+import javax.sql.DataSource;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import com.mysql.jdbc.PreparedStatement;
 
-
-public class QueryWithoutContext {
+public final class QueryWithContext {
 
     public static void query(PrintWriter out) throws NamingException {
-        MysqlDataSource ds = null;
+        Context context = null;
+        DataSource datasource = null;
         Connection connect = null;
         Statement statement = null;
 
         try {
-            // Create a new DataSource (MySQL specifically)
-            // and provide the relevant information to be used by Tomcat.
-            ds = new MysqlDataSource();
-            ds.setUrl("jdbc:mysql://localhost:3306/albums");
-            ds.setUser("temp");
-            ds.setPassword("1111");
-            
-            connect = ds.getConnection();
-            String adduser = "INSERT INTO username" + "";
+            // Get the context and create a connection
+            context = new InitialContext();
+            datasource = (DataSource) context.lookup("java:/comp/env/jdbc/username");
+            connect = datasource.getConnection();
 
             // Create the statement to be used to get the results.
             statement = connect.createStatement();
+            //String user=request.getParameter("uname");
+            //PreparedStatement ps = connect.prepareStatement("INSERT INTO username VALUES (?)");
+            PreparedStatement ps = (PreparedStatement) connect.prepareStatement("INSERT INTO test VALUES (?)");
+            ps.setString(1, "");
+            ps.executeUpdate();
             String query = "SELECT * FROM the_classics";
 
             // Execute the query and get the result set.
             ResultSet resultSet = statement.executeQuery(query);
-            out.println("<strong>Printing result using DataSource...</strong><br>");
+            out.println("<strong>Printing result using context file...</strong><br>");
             while (resultSet.next()) {
                 String albumName = resultSet.getString("name");
                 String artist = resultSet.getString("artist");
