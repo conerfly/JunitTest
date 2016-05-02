@@ -10,7 +10,6 @@
 <%@ page import="javax.naming.InitialContext" %>
 <%@ page import="javax.naming.NamingException" %>
 <%@ page import="javax.sql.DataSource" %>
-<%@ page import="com.mysql.jdbc.PreparedStatement" %>
 
 <html>
 	<body>
