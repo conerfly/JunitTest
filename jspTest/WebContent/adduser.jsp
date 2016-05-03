@@ -10,7 +10,6 @@
 <%@ page import="javax.naming.InitialContext" %>
 <%@ page import="javax.naming.NamingException" %>
 <%@ page import="javax.sql.DataSource" %>
-
 <html>
 	<body>
 		<font face ="verdana">
@@ -23,11 +22,8 @@
 	            datasource = (DataSource) context.lookup("java:/comp/env/jdbc/username");
 	            connect = datasource.getConnection();
 	            statement = connect.createStatement();
-
 	            response.setContentType("text/html");								            //set response 
-
-		        PrintWriter output = response.getWriter();
-		        
+		        PrintWriter output = response.getWriter();		        
 		        String query = "";												//insert username into database;
 				String user=request.getParameter("uname");
 				String pwd=request.getParameter("password");
@@ -40,18 +36,19 @@
 						query = "SELECT * FROM username";
 						resultSet = statement.executeQuery(query);
 			%>
-			<% 
-						// why cannot write table outside java section?
+			<% 			
+						//why cannot write table outside java section?
 						output.println("<table cellspacing=5 cellpadding=5 bgcolor=#959999 colspan=2 rowspan=2 align='center'>");
 						while (resultSet.next()) {
-			                String username = resultSet.getString("username");
-			                output.println("<tr><td> User: " + username + "</td></tr>");
-			            }
+			                String username = resultSet.getString("username");                     
+			                output.println("<tr><td> User: " + username + " <a href='delete.jsp?name="+username+"'>Delete</a></td></tr>");
+						}
+
 						output.println("</table>");
 						/* output.println("<form action='Add.jsp'>");
 						output.println("<br><input type='' value='Add' align='center'>");
 						output.println("</form>"); */
-						output.println("<br><input type='button' value='Add'><a href='Add.jsp'></a>");
+						output.println("<br><a href='Add.jsp'>Add</a>");
 			%>        
 			<%
 					}else{

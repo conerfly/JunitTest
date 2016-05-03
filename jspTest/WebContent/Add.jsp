@@ -16,6 +16,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
+		<form method='post'>
 			<font size=4 face="Verdana" color=#120292>
 				<table cellspacing=5 cellpadding=5 bgcolor=#959999 colspan=2 rowspan=2 align="center">
 					<tr>
@@ -30,10 +31,11 @@
 				<table align="center">
 					<tr>
 						<td><input type="submit" name="adduser" value="Add" ></td>
-						<td><input type="Reset" value=" Cancel " ></td>
+						<td><input type="Reset" value="Cancel" ></td>
 					</tr>
 				</table>
 			</font>
+		</form>
 			<%
 					Context context = null;										//database connection
 			        DataSource datasource = null;
@@ -46,13 +48,12 @@
 		
 		            response.setContentType("text/html");								            //set response 
 					PrintWriter output = response.getWriter();
-			        
 			        String query = "";												//insert username into database;
-					String user=request.getParameter("uname");
-					String pwd=request.getParameter("password");
+					String user=request.getParameter("newuname");
+					String pwd=request.getParameter("newpassword");
 					if(request.getParameter("adduser")!=null){
 						query = "INSERT INTO username VALUES ('"+user+"','"+pwd+"')";
-			            ResultSet resultSet = statement.executeQuery(query);
+			            int result = statement.executeUpdate(query);
 			            output.println("Add user successfully");
 					}
 			%>
