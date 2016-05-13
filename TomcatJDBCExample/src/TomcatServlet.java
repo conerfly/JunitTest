@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
